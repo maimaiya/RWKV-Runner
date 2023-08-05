@@ -1,7 +1,7 @@
 # install git python3.10 yarn by yourself
 # change model and strategy according to your hardware
 
-sudo apt install python-dev
+sudo apt-get -y install python-dev
 
 # mkdir RWKV-Next-Web
 # cd RWKV-Next-Web
