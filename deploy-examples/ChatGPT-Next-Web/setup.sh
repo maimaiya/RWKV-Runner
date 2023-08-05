@@ -1,15 +1,15 @@
 # install git python3.10 yarn by yourself
 # change model and strategy according to your hardware
 
-# sudo apt install python3-dev
+sudo apt install python-dev
 
 # mkdir RWKV-Next-Web
 # cd RWKV-Next-Web
 
 # git clone https://github.com/josStorer/RWKV-Runner --depth=1
-python3 -m pip install torch torchvision torchaudio
-python3 -m pip install -r /kaggle/working/RWKV-Runner/backend-python/requirements.txt
-python3 /kaggle/working/RWKV-Runner/backend-python/main.py > log.txt &
+python -m pip install torch torchvision torchaudio
+python -m pip install -r /kaggle/working/RWKV-Runner/backend-python/requirements.txt
+python /kaggle/working/RWKV-Runner/backend-python/main.py > log.txt &
 
 if [ ! -d /kaggle/working/RWKV-Runner/models ]; then
     mkdir /kaggle/working/RWKV-Runner/models
