@@ -8,11 +8,11 @@
 
 # git clone https://github.com/josStorer/RWKV-Runner --depth=1
 python3 -m pip install torch torchvision torchaudio
-python3 -m pip install -r RWKV-Runner/backend-python/requirements.txt
-python3 ./RWKV-Runner/backend-python/main.py > log.txt &
+python3 -m pip install -r /kaggle/working/RWKV-Runner/backend-python/requirements.txt
+python3 /kaggle/working/RWKV-Runner/backend-python/main.py > log.txt &
 
-if [ ! -d RWKV-Runner/models ]; then
-    mkdir RWKV-Runner/models
+if [ ! -d /kaggle/working/RWKV-Runner/models ]; then
+    mkdir /kaggle/working/RWKV-Runner/models
 fi
 wget -N https://huggingface.co/BlinkDL/rwkv-4-world/resolve/main/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth -P /kaggle/working/RWKV-Runner/models/
 
