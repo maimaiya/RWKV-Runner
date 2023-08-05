@@ -17,11 +17,10 @@ fi
 wget -N https://huggingface.co/BlinkDL/rwkv-4-world/resolve/main/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth -P RWKV-Runner/models/
 
 git clone https://github.com/Yidadaa/ChatGPT-Next-Web --depth=1
-cd ChatGPT-Next-Web
-yarn install
-yarn build
+cd ChatGPT-Next-Web && yarn install
+cd ChatGPT-Next-Web && yarn build
 export PROXY_URL=""
 export BASE_URL=http://127.0.0.1:8000
-yarn start &
+cd ChatGPT-Next-Web && yarn start &
 
 curl http://127.0.0.1:8000/switch-model -X POST -H "Content-Type: application/json" -d '{"model":"./RWKV-Runner/models/RWKV-4-World-0.1B-v1-20230520-ctx4096.pth","strategy":"cpu fp32"}'
